@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>体检数据填写</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>体检数据填写</h1>
+    <form id="healthForm">
+      <label>姓名：<input type="text" name="姓名" required /></label>
+      <label>性别：
+        <select name="性别" required>
+          <option value="男">男</option>
+          <option value="女">女</option>
+        </select>
+      </label>
+      <label>出生年份：<input type="number" name="出生年份" required /></label>
+      <label>联系电话：<input type="text" name="电话" /></label>
+      <label>身份证号码：<input type="text" name="身份证号" /></label>
+      <label>单位名称：<input type="text" name="单位" /></label>
+      <label>日期（如20250721）：<input type="text" name="日期" required /></label>
+      <button type="submit">生成 CSV 文件</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
