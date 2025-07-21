@@ -16,3 +16,25 @@ document.getElementById("healthForm").addEventListener("submit", function (e) {
   link.download = filename;
   link.click();
 });
+const heightInput = document.getElementById("height");
+const weightInput = document.getElementById("weight");
+const bmiInput = document.getElementById("bmi");
+const idealInput = document.getElementById("ideal");
+
+function updateBMI() {
+  const h = parseFloat(heightInput.value);
+  const w = parseFloat(weightInput.value);
+  if (!isNaN(h) && !isNaN(w) && h > 0) {
+    const hM = h / 100;
+    const bmi = w / (hM * hM);
+    const ideal = 22 * (hM * hM);
+    bmiInput.value = bmi.toFixed(1);
+    idealInput.value = ideal.toFixed(1);
+  } else {
+    bmiInput.value = "";
+    idealInput.value = "";
+  }
+}
+
+heightInput.addEventListener("input", updateBMI);
+weightInput.addEventListener("input", updateBMI);
