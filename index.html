@@ -94,17 +94,22 @@
       <label>左眼（这个是左眼视力 不会填微信问我）：<input type="text" name="左眼" required /></label>
       <label>右眼（这个是右眼视力 不会填微信问我）：<input type="text" name="右眼" required /></label>
       <button type="submit">生成 CSV 文件</button>
-    </form><div style="text-align: center; margin-top: 30px;">
+<div style="text-align: center; margin-top: 30px;">
   <p>📱 微信扫码联系我：</p>
-  <img src="weixin.png" alt="微信二维码" width="200" />
-</div>
-
+  <div style="display: flex; justify-content: center; gap: 40px;">
+    <img src="weixin.png" alt="微信1" width="150" />
+    <img src="weixin2.jpg" alt="微信2" width="150" />
   </div>
-  <script src="script.js"></script>
-  <div style="text-align:center;margin-top:20px;font-size:14px;color:#888;">
-  👀 本页面被访问了 <span id="busuanzi_value_page_pv">0</span> 次
 </div>
 <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+  window.onload = function () {
+    setTimeout(() => {
+      const pv = document.getElementById("busuanzi_value_page_pv")?.innerText;
+      console.log("👀 当前访问总次数：", pv);
+    }, 1000);
+  };
+</script>
 
 </body>
 </html>
